@@ -44,7 +44,8 @@ class export_mqtt(object):
             self.mqtt_client.username_pw_set(self.mqtt_config['username'], self.mqtt_config['password'])
 
         if self.mqtt_config['port'] == 8883 or self.mqtt_config['tls'] == True:
-            self.mqtt_client.tls_set(certfile='/ssl/fullchain.pem', keyfile='/ssl/privkey.pem', cert_reqs=ssl.CERT_REQUIRED)
+            self.mqtt_client.tls_set()
+            #certfile='/ssl/fullchain.pem', keyfile='/ssl/privkey.pem', cert_reqs=ssl.CERT_REQUIRED
         
         self.mqtt_client.connect_async(self.mqtt_config['host'], port=self.mqtt_config['port'], keepalive=60)
         self.mqtt_client.loop_start()
