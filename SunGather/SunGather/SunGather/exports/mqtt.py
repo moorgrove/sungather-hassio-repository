@@ -25,7 +25,7 @@ class export_mqtt(object):
             'username': config.get('username', None),
             'password': config.get('password',None),
             'homeassistant': config.get('homeassistant',False),
-            'tls': config.get('tls', False)
+            'tls': config.get('tls', True)
         }
 
         self.ha_sensors = [{}]
