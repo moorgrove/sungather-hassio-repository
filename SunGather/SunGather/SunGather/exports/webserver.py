@@ -26,7 +26,7 @@ class export_webserver(object):
             return False
         pending_config = False
         config_body = f"""
-            <h3>SunGather v{__version__}</h3></p>
+            <h3>SunGather v{__version__} Custom</h3></p>
             <h4>Configuration changes require a restart to take effect!</h4>    
             <form action="/config">
             <label>Inverter Settings:</label><br>
