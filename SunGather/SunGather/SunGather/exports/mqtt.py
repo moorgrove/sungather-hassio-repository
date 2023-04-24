@@ -24,7 +24,7 @@ class export_mqtt(object):
             'topic': config.get('topic', f"SunGather/{self.serial_number}"),
             'username': config.get('username', None),
             'password': config.get('password',None),
-            'homeassistant': config.get('homeassistant',False)
+            'homeassistant': config.get('homeassistant',False),
             'tls': config.get('tls', False)
         }
 
